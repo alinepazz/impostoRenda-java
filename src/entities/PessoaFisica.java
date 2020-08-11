@@ -31,7 +31,6 @@ public class PessoaFisica extends TaxaImposto {
 		if(gastoSaude > 0) {
 			gasto = gastoSaude * 5.0;
 		}
-		
 		return renda - gasto;
 	}
 	

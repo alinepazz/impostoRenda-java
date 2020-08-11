@@ -21,8 +21,14 @@ public class PessoaJuridica extends TaxaImposto {
 	
 	@Override
 	public Double imposto() {
+		double renda = 0.0;
 		
-		return null;
+		if(TotalFuncionario >= 10) {
+			renda = getRendaAnual() * 1.4;
+		}else
+			renda = getRendaAnual() * 1.6;
+		
+		return renda;
 	}
 	
 	
