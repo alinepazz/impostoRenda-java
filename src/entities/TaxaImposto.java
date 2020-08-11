@@ -29,6 +29,6 @@ public abstract class TaxaImposto {
 		this.rendaAnual = rendaAnual;
 	}
 	
-	
+	public abstract Double imposto();
 	
 }

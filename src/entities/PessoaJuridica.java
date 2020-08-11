@@ -19,5 +19,12 @@ public class PessoaJuridica extends TaxaImposto {
 	}
 	
 	
+	@Override
+	public Double imposto() {
+		
+		return null;
+	}
+	
+	
 	
 }
