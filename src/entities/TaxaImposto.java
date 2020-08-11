@@ -5,6 +5,9 @@ public abstract class TaxaImposto {
 	private String nome;
 	private Double rendaAnual;
 	
+	public TaxaImposto() {
+		
+	}
 	public TaxaImposto(String nome, Double rendaAnual) {
 		this.nome = nome;
 		this.rendaAnual = rendaAnual;
