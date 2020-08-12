@@ -7,7 +7,6 @@ import java.util.Scanner;
 
 import entities.PessoaFisica;
 import entities.PessoaJuridica;
-import entities.Product;
 import entities.TaxaImposto;
 
 public class Program {
@@ -27,7 +26,6 @@ public class Program {
 			System.out.print("Individual or company (i/c)?");
 			char origem = sc.next().charAt(0);
 			System.out.println("Name: ");
-			sc.nextLine();
 			String name = sc.nextLine();
 			System.out.print("Anual income: ");
 			double rendaAnual = sc.nextDouble();
@@ -37,6 +35,7 @@ public class Program {
 				double gastoSaude = sc.nextDouble();
 				list.add(new PessoaFisica(name, rendaAnual, gastoSaude));	
 			}else if (origem == 'c') {
+				System.out.print("Number of employees: ");
 				int totalFuncionario = sc.nextInt();
 				list.add(new PessoaJuridica(name, rendaAnual, totalFuncionario));
 			}
@@ -46,8 +45,16 @@ public class Program {
 		System.out.println("TAXES PAID:");
 		
 		for (TaxaImposto imp : list) {
-			System.out.println(imp.getNome() + ": $" + imp.imposto());
+			System.out.println(imp.getNome() + ": $ " + String.format("%.2f", imp.imposto()));
 		}
+		
+		double sum = 0.0;
+		for (TaxaImposto imp : list) {
+			sum += imp.imposto();
+		}
+		System.out.println("TOTAL TAXES: " + String.format("%.2f", sum));
+		
+		
 		sc.close();
 
 	}
