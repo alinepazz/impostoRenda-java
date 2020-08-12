@@ -23,13 +23,13 @@ public class PessoaFisica extends TaxaImposto {
 		double gasto = 0.0;
 		
 		if(getRendaAnual() <= 20000.00) {
-			renda = getRendaAnual() * 1.5;
+			renda = getRendaAnual() * 0.15;
 		}else if(getRendaAnual() > 20000.00) {
-			renda = getRendaAnual() * 2.5;
+			renda = getRendaAnual() * 0.25;
 		}
 		
 		if(gastoSaude > 0) {
-			gasto = gastoSaude * 5.0;
+			gasto = gastoSaude * 0.5;
 		}
 		return renda - gasto;
 	}

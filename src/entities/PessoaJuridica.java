@@ -24,9 +24,9 @@ public class PessoaJuridica extends TaxaImposto {
 		double renda = 0.0;
 		
 		if(TotalFuncionario >= 10) {
-			renda = getRendaAnual() * 1.4;
+			renda = getRendaAnual() * 0.14;
 		}else
-			renda = getRendaAnual() * 1.6;
+			renda = getRendaAnual() * 0.16;
 		
 		return renda;
 	}
